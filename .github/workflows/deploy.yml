@@ -1,18 +1,14 @@
-name: Deploy to GitHub Pages
+name: Hello World
 
-on:
-  push:
-    branches:
-      - main
-    paths:
-      - index.html
+on: [push]
 
 jobs:
-  deploy:
+  say-hello:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Build and Deploy
-        run: |
-          npm install
-          npx gh-pages -d dist
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "👋 Hello, world from GitHub Actions!"
