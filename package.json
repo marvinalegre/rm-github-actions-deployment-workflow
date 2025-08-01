@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/marvinalegre/rm-github-actions-deployment-workflow",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }
