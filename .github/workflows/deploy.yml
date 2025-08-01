@@ -30,4 +30,6 @@ jobs:
         run: |
           git config --global user.email "marvinalegredev@gmail.com"
           git config --global user.name "Marvin Alegre"
-          npx gh-pages -d dist
+          npx gh-pages -d dist \
+            -u "github-actions[bot] <actions@github.com>" \
+            -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/marvinalegre/rm-github-actions-deployment-workflow.git
