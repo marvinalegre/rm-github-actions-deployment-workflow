@@ -28,4 +28,6 @@ jobs:
           GIT_USER: github-actions[bot]
           GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.email "marvinalegredev@gmail.com"
+          git config --global user.name "Marvin Alegre"
           npx gh-pages -d dist
