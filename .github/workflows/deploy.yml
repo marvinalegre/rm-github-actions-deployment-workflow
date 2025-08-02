@@ -1,4 +1,6 @@
 name: Deploy to GitHub Pages
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 on:
   push:
@@ -15,4 +17,4 @@ jobs:
       - name: Print something
         run: |
           npm install
-          node deploy.js
+          npx gh-pages -d dist
