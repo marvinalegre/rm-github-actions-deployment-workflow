@@ -17,4 +17,4 @@ jobs:
       - name: Print something
         run: |
           npm install
-          npx gh-pages -d dist -r https://github.com/marvinalegre/rm-github-actions-deployment-workflow
+          node deploy.js
