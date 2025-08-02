@@ -14,13 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Configure Git
+      - name: Print something
         run: |
-          git config user.name "Marvin Alegre"
-          git config user.email "marvinalegredev@gmail.com"
-
-      - name: Commit and push if changes
-        run: |
-          git add index.html
-          git diff --cached --quiet || git commit -m "Auto update index.html"
-          git push
+          echo 'printing...'
